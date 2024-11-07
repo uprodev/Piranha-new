@@ -4,7 +4,6 @@ $black: #171818;
 $font1: "Inter", serif;
 $font2: "IBM Plex Sans", serif;
 $font3: 'Gilroy', serif;
-$font4: "Open Sans", serif;
 body{
   font-family: $font2;
   font-style: normal;
@@ -73,6 +72,7 @@ ul{
 p, a{
   color: $text;
   margin: 0;
+  font-family: $font1;
 }
 input{
   -webkit-appearance: none!important;
@@ -89,9 +89,10 @@ h1{
   margin: 0 0 30px;
 }
 h2{
+  font-family: $font1;
   font-size: 60px;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   font-weight: 600;
 }
 h3{
@@ -559,16 +560,16 @@ input, textarea, button{
   opacity: 0;
 }
 .header .header-main .container-fluid{
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+  //box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
 }
 
 .header-light .header-main .container-fluid{
   box-shadow: none;
 }
 
-.header-shadow .header-main .container-fluid{
+/*.header-shadow .header-main .container-fluid{
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
-}
+}*/
 
 
 
@@ -666,40 +667,55 @@ input, textarea, button{
   color: #fff;
   background: transparent;
   font-family: $font2;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
-  letter-spacing: -0.4px;
+  letter-spacing:0;
   overflow: hidden;
   position: relative;
-  &:after{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    content: '';
-    height: 100%;
-    background: #fff;
-    transition: all .4s ease;
-    width: 100%;
-  }
+  text-transform: uppercase;
   img{
     width: 14px;
-    margin-right: 4px;
+    margin-right: 8px;
     filter: invert(1);
   }
   span{
+    z-index: 1;
     position: relative;
-    z-index: 2;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    height: 100%;
+  }
+  span:last-child{
+    content: attr(data-text);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 100%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
   }
   &:hover{
-    color: #000;
-    img{
-      filter: invert(0);
-    }
-    &:after{
-      left: 0;
+    span{
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
     }
   }
 }
@@ -761,6 +777,7 @@ input, textarea, button{
     }
   }
   h6{
+    font-family: $font1;
     margin: 0;
   }
 }
@@ -768,7 +785,7 @@ input, textarea, button{
   color: #22809B;
   font-size: 100px;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -5px;
   font-weight: 500;
 }
 .products{
@@ -809,7 +826,7 @@ input, textarea, button{
       font-weight: 400;
       line-height: 1.11;
       text-transform: uppercase;
-      font-family: $font4;
+      font-family: $font2;
     }
     a:hover{
       figure{
@@ -842,27 +859,48 @@ input, textarea, button{
   letter-spacing: -0.4px;
   overflow: hidden;
   position: relative;
-  font-family: $font4;
-  &:after{
-    position: absolute;
-    top: 0;
-    left: -100%;
-    content: '';
-    height: 100%;
-    background: #22809b;
-    transition: all .4s ease;
-    width: 100%;
-  }
-
+  font-family: $font2;
+  text-transform: uppercase;
   span{
+    z-index: 1;
     position: relative;
-    z-index: 2;
-    text-transform: uppercase;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    height: 100%;
+  }
+  span:last-child{
+    content: attr(data-text);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 100%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  img{
+    margin-right: 8px;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(63%) saturate(585%) hue-rotate(147deg) brightness(91%) contrast(83%);
+    width: 14px;
   }
   &:hover{
-    color: #fff;
-    &:after{
-      left: 0;
+    span{
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
     }
   }
 }
@@ -900,6 +938,20 @@ input, textarea, button{
           object-fit: cover;
           transition: all .4s ease;
           border-radius: 15px;
+          position: relative;
+          top:-2px;
+        }
+        &:after{
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,1) 100%);
+          border-radius: 15px;
+
+
         }
       }
       p{
@@ -1047,7 +1099,7 @@ footer{
       padding: 0 34px;
       font-size: 15px;
       font-weight: 400;
-      font-family: $font4;
+      font-family: $font2;
     }
   }
   .bottom{
@@ -1343,8 +1395,13 @@ footer{
   }
 }
 
-.header-border .container-fluid{
+.header-border .header-main .container-fluid{
   border: 1px solid #d3d8d8;
+}
+.is-menu{
+  .header-border .header-main .container-fluid{
+    border-color: #fff;
+  }
 }
 /*------------------------------END-CONTACT-PAGE----------------------------------*/
 /*------------------------------NEWS-PAGE----------------------------------*/
@@ -1395,8 +1452,9 @@ footer{
         right: 0;
         bottom: 0;
         content: '';
-        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 51%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(180deg, rgba(12,12,12,0) 0%, rgba(12,12,12,1) 100%);
       }
+
       .data{
         display: inline-block;
         padding: 0 15px;
@@ -1416,6 +1474,8 @@ footer{
           object-fit: cover;
           transition: all .4s ease;
           transform-origin: center;
+          position: relative;
+          top: -2px;
         }
       }
       &:hover{
@@ -1801,5 +1861,118 @@ footer{
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+.products .item p{
+  font-family: $font2;
+  font-weight: 700;
+}
+
+footer .btn-wrap .btn{
+  font-family: $font2;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+footer .item-menu li a, footer .item p, footer .item p a{
+  font-weight: 500;
+}
+.home-banner .text p{
+  font-family: $font1;
+}
+
+.careers h1{
+  letter-spacing: -3.5px;
+}
+.careers .title p{
+  letter-spacing: 0;
+}
+.default-form .input-wrap input{
+  font-weight: 500;
+}
+.contacts h1{
+  letter-spacing: -4px;
+}
+.contacts .h3{
+  letter-spacing: -1px;
+}
+.contacts .bottom h5{
+  font-family: $font1;
+}
+.news-block .title{
+  letter-spacing: -1.5px;
+}
+.news-block .title-item{
+  letter-spacing: 0;
+}
+.text-default h1{
+  font-family: $font1;
+}
+.text-default h1{
+  letter-spacing: -3px;
+}
+.text-default h6{
+  font-family: $font1;
+}
+.text-default .text-wrap{
+  font-family: $font1;
+}
+.product-header p{
+  font-size: 30px;
+}
+.header-navbar .navigation-main > ul{
+  justify-content: space-between;
+}
+.header-navbar .navigation-main > ul > li{
+  margin-right: 10px;
+}
+.header-navbar .navigation-main > ul > li:last-child{
+  margin-right: 0;
+}
+.header-navbar .navigation-main{
+  width: 1480px;
+  max-width: 100%;
+  margin: 110px auto 0;
+}
+.header-navbar .navbar-toggler {
+  margin: 0 0 0 132px;
+  position: relative;
+  top: -4px;
+}
+.header-navbar .header-navbar-bottom{
+  width: 1480px;
+  max-width: 100%;
+  margin: -35px auto 0;
+  .btn-border{
+    padding: 0 20px 2px;
+  }
+}
+.header-navbar .navigation-main > ul > li > a{
+  font-family: $font2;
+}
+.header-navbar .navigation-main > ul > li ul a{
+  font-family: $font2;
+  font-size: 15px;
+  white-space: nowrap;
+}
+.header-navbar .navigation-main > ul > li ul{
+  max-width: 140px;
+}
+.header-navbar .navigation-main > ul > li ul li{
+  margin-bottom: 10px;
+}
+.header-navbar .container-fluid{
+  justify-content: flex-start;
+}
+.header-navbar{
+  background: transparent;
+}
+.header-navbar .container-fluid{
+  background: #fff;
+  border-radius: 5px;
+  max-width: calc(100% - 124px);
+}
+.header-navbar{
+  padding-bottom: 5px;
 }
 /*----------------------------END-PRODUCT-PAGE----------------------------------*/

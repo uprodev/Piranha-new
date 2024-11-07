@@ -51,7 +51,8 @@ ul {
 
 p, a {
   color: #A2A6AC;
-  margin: 0; }
+  margin: 0;
+  font-family: "Inter", serif; }
 
 input {
   -webkit-appearance: none !important;
@@ -67,9 +68,10 @@ h1 {
   margin: 0 0 30px; }
 
 h2 {
+  font-family: "Inter", serif;
   font-size: 60px;
   line-height: 1;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
   font-weight: 600; }
 
 h3 {
@@ -559,18 +561,13 @@ input, textarea, button {
   position: relative;
   opacity: 0; }
 
-.header .header-main .container-fluid {
-  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); }
-
 .header-light .header-main .container-fluid {
   -webkit-box-shadow: none;
           box-shadow: none; }
 
-.header-shadow .header-main .container-fluid {
-  -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15); }
-
+/*.header-shadow .header-main .container-fluid{
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.15);
+}*/
 .home-banner {
   width: 100vw;
   height: calc(100vh + 30px);
@@ -665,39 +662,54 @@ input, textarea, button {
   color: #fff;
   background: transparent;
   font-family: "IBM Plex Sans", serif;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   display: inline-block;
   cursor: pointer;
   border-radius: 5px;
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
   overflow: hidden;
-  position: relative; }
-  .btn-download:after {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    content: '';
-    height: 100%;
-    background: #fff;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
-    width: 100%; }
+  position: relative;
+  text-transform: uppercase; }
   .btn-download img {
     width: 14px;
-    margin-right: 4px;
+    margin-right: 8px;
     -webkit-filter: invert(1);
             filter: invert(1); }
   .btn-download span {
+    z-index: 1;
     position: relative;
-    z-index: 2; }
-  .btn-download:hover {
-    color: #000; }
-    .btn-download:hover img {
-      -webkit-filter: invert(0);
-              filter: invert(0); }
-    .btn-download:hover:after {
-      left: 0; }
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    height: 100%; }
+  .btn-download span:last-child {
+    content: attr(data-text);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 100%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .btn-download:hover span {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
 
 .header .lang-switcher.active button:after {
   -webkit-transform: scaleY(-1);
@@ -753,13 +765,14 @@ input, textarea, button {
     height: auto;
     border-radius: 20px; }
 .home-section-1 h6 {
+  font-family: "Inter", serif;
   margin: 0; }
 
 .big-blue {
   color: #22809B;
   font-size: 100px;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -5px;
   font-weight: 500; }
 
 .products {
@@ -804,7 +817,7 @@ input, textarea, button {
       font-weight: 400;
       line-height: 1.11;
       text-transform: uppercase;
-      font-family: "Open Sans", serif; }
+      font-family: "IBM Plex Sans", serif; }
     .products .item a:hover figure img {
       opacity: 0; }
     .products .item a:hover figure .hover {
@@ -827,25 +840,47 @@ input, textarea, button {
   letter-spacing: -0.4px;
   overflow: hidden;
   position: relative;
-  font-family: "Open Sans", serif; }
-  .btn-border:after {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    content: '';
-    height: 100%;
-    background: #22809b;
-    -webkit-transition: all .4s ease;
-    transition: all .4s ease;
-    width: 100%; }
+  font-family: "IBM Plex Sans", serif;
+  text-transform: uppercase; }
   .btn-border span {
+    z-index: 1;
     position: relative;
-    z-index: 2;
-    text-transform: uppercase; }
-  .btn-border:hover {
-    color: #fff; }
-    .btn-border:hover:after {
-      left: 0; }
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    height: 100%; }
+  .btn-border span:last-child {
+    content: attr(data-text);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 100%;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out; }
+  .btn-border img {
+    margin-right: 8px;
+    -webkit-filter: brightness(0) saturate(100%) invert(40%) sepia(63%) saturate(585%) hue-rotate(147deg) brightness(91%) contrast(83%);
+            filter: brightness(0) saturate(100%) invert(40%) sepia(63%) saturate(585%) hue-rotate(147deg) brightness(91%) contrast(83%);
+    width: 14px; }
+  .btn-border:hover span {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%); }
 
 .news {
   padding: 218px 0 100px;
@@ -885,6 +920,18 @@ input, textarea, button {
              object-fit: cover;
           -webkit-transition: all .4s ease;
           transition: all .4s ease;
+          border-radius: 15px;
+          position: relative;
+          top: -2px; }
+        .news .item a figure:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 100%;
+          background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0)), to(#0c0c0c));
+          background: linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, #0c0c0c 100%);
           border-radius: 15px; }
       .news .item a p {
         position: absolute;
@@ -1003,7 +1050,7 @@ footer {
       padding: 0 34px;
       font-size: 15px;
       font-weight: 400;
-      font-family: "Open Sans", serif; }
+      font-family: "IBM Plex Sans", serif; }
   footer .bottom {
     margin-top: 53px;
     padding-top: 33px;
@@ -1272,8 +1319,11 @@ footer {
       .contacts .bottom .item p:last-child {
         margin-bottom: 0; }
 
-.header-border .container-fluid {
+.header-border .header-main .container-fluid {
   border: 1px solid #d3d8d8; }
+
+.is-menu .header-border .header-main .container-fluid {
+  border-color: #fff; }
 
 /*------------------------------END-CONTACT-PAGE----------------------------------*/
 /*------------------------------NEWS-PAGE----------------------------------*/
@@ -1320,8 +1370,8 @@ footer {
         right: 0;
         bottom: 0;
         content: '';
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(51%, rgba(255, 255, 255, 0)), to(black));
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 51%, black 100%); }
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0)), to(#0c0c0c));
+        background: linear-gradient(180deg, rgba(12, 12, 12, 0) 0%, #0c0c0c 100%); }
       .news-block .item a .data {
         display: inline-block;
         padding: 0 15px;
@@ -1341,7 +1391,9 @@ footer {
         -webkit-transition: all .4s ease;
         transition: all .4s ease;
         -webkit-transform-origin: center;
-                transform-origin: center; }
+                transform-origin: center;
+        position: relative;
+        top: -2px; }
       .news-block .item a:hover .bg img {
         -webkit-transform: scale(1.02);
                 transform: scale(1.02); }
@@ -1645,6 +1697,119 @@ footer {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover; }
+
+.products .item p {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 700; }
+
+footer .btn-wrap .btn {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase; }
+
+footer .item-menu li a, footer .item p, footer .item p a {
+  font-weight: 500; }
+
+.home-banner .text p {
+  font-family: "Inter", serif; }
+
+.careers h1 {
+  letter-spacing: -3.5px; }
+
+.careers .title p {
+  letter-spacing: 0; }
+
+.default-form .input-wrap input {
+  font-weight: 500; }
+
+.contacts h1 {
+  letter-spacing: -4px; }
+
+.contacts .h3 {
+  letter-spacing: -1px; }
+
+.contacts .bottom h5 {
+  font-family: "Inter", serif; }
+
+.news-block .title {
+  letter-spacing: -1.5px; }
+
+.news-block .title-item {
+  letter-spacing: 0; }
+
+.text-default h1 {
+  font-family: "Inter", serif; }
+
+.text-default h1 {
+  letter-spacing: -3px; }
+
+.text-default h6 {
+  font-family: "Inter", serif; }
+
+.text-default .text-wrap {
+  font-family: "Inter", serif; }
+
+.product-header p {
+  font-size: 30px; }
+
+.header-navbar .navigation-main > ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header-navbar .navigation-main > ul > li {
+  margin-right: 10px; }
+
+.header-navbar .navigation-main > ul > li:last-child {
+  margin-right: 0; }
+
+.header-navbar .navigation-main {
+  width: 1480px;
+  max-width: 100%;
+  margin: 110px auto 0; }
+
+.header-navbar .navbar-toggler {
+  margin: 0 0 0 132px;
+  position: relative;
+  top: -4px; }
+
+.header-navbar .header-navbar-bottom {
+  width: 1480px;
+  max-width: 100%;
+  margin: -35px auto 0; }
+  .header-navbar .header-navbar-bottom .btn-border {
+    padding: 0 20px 2px; }
+
+.header-navbar .navigation-main > ul > li > a {
+  font-family: "IBM Plex Sans", serif; }
+
+.header-navbar .navigation-main > ul > li ul a {
+  font-family: "IBM Plex Sans", serif;
+  font-size: 15px;
+  white-space: nowrap; }
+
+.header-navbar .navigation-main > ul > li ul {
+  max-width: 140px; }
+
+.header-navbar .navigation-main > ul > li ul li {
+  margin-bottom: 10px; }
+
+.header-navbar .container-fluid {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.header-navbar {
+  background: transparent; }
+
+.header-navbar .container-fluid {
+  background: #fff;
+  border-radius: 5px;
+  max-width: calc(100% - 124px); }
+
+.header-navbar {
+  padding-bottom: 5px; }
 
 /*----------------------------END-PRODUCT-PAGE----------------------------------*/
 

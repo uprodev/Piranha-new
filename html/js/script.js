@@ -71,10 +71,12 @@ document.querySelectorAll(".navbar-toggler").forEach((toggler) => {
   toggler.addEventListener("click", function () {
     if (document.querySelector(".header-navbar").classList.contains("active")) {
       document.querySelector(".header").classList.remove("nav-opened");
+      document.querySelector("html").classList.remove("is-menu");
       document.querySelector(".header-navbar").classList.remove("active");
     } else {
       document.querySelector(".header-navbar").classList.add("active");
       document.querySelector(".header").classList.add("nav-opened");
+      document.querySelector("html").classList.add("is-menu");
     }
   });
 });
