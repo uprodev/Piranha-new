@@ -1,6 +1,6 @@
 // lenis
 const lenis = new Lenis({
-  lerp: 0.3,
+  lerp: 0.6,
 });
 
 function raf(time) {
@@ -16,7 +16,7 @@ lenis.on("scroll", ScrollTrigger.update);
 
 
 gsap.ticker.add((time) => {
-  lenis.raf(time * 1000);
+  lenis.raf(time *1000);
 });
 
 // animate home main title
@@ -178,5 +178,11 @@ jQuery(document).ready(function ($) {
     height: 75
   });
 
-
+  $(window).scroll(function () {
+    if($(this).scrollTop() > $(this).height()) {
+      $('.header').addClass('home-border')
+    } else {
+      $('.top-btn').removeClass('home-border')
+    }
+  });
 });

@@ -78,7 +78,8 @@ h3 {
   font-size: 30px;
   line-height: 1.2;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: -0.5px;
+  font-family: "Inter", serif;
   margin: 0 0 30px; }
 
 h4 {
@@ -1521,7 +1522,7 @@ footer {
 /*-----------------------------END-NEWS-INNER-PAGE----------------------------------*/
 /*-----------------------------PRODUCT-PAGE----------------------------------*/
 .product-header {
-  padding: 287px 0 0;
+  padding: 200px 0 0;
   margin: 0 0 205px; }
   .product-header .link-back-wrapper {
     margin: 0 0 153px; }
@@ -1810,6 +1811,49 @@ footer .item-menu li a, footer .item p, footer .item p a {
 
 .header-navbar {
   padding-bottom: 5px; }
+
+.home-border .header-main .container-fluid {
+  border: 1px solid #d3d8d8; }
+
+.header-navbar .container-fluid {
+  position: relative; }
+  .header-navbar .container-fluid:before {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    background: #fff;
+    -webkit-transition: all 3s cubic-bezier(0.11, 1.11, 0, 0.98);
+    transition: all 3s cubic-bezier(0.11, 1.11, 0, 0.98);
+    border-radius: 5px; }
+
+.home .home-border .header-navbar .container-fluid:before {
+  border: 1px solid #d3d8d8; }
+
+.header-navbar .navigation-main {
+  position: relative;
+  z-index: 2; }
+
+/**/
+.header-navbar {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 0;
+  max-height: 0;
+  pointer-events: none;
+  overflow: hidden; }
+
+.header-navbar.active {
+  opacity: 1;
+  pointer-events: inherit;
+  max-height: 540px; }
+
+.header-navbar .navbar-toggler {
+  position: absolute;
+  top: 0;
+  left: 10px; }
 
 /*----------------------------END-PRODUCT-PAGE----------------------------------*/
 
