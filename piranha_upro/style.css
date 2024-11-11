@@ -1,0 +1,13 @@
+/*   
+Theme Name: Piranha-Tech
+*/
+
+.contacts .bottom .item h6 img{
+	height: auto;
+}
+
+.default-form .input-wrap .wpcf7-form-control-wrap{
+	width: 100%;
+	position: relative;
+	bottom:0;
+}
