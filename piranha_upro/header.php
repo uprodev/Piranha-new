@@ -10,7 +10,7 @@
 <?php $body_class = is_front_page() ? 'home' : is_page(119) ? 'bg-green' : '' ?>
 <body <?php body_class($body_class); ?>>
   <?php wp_body_open(); ?>
-  <header class="header header-light<?php if(get_field('header_border')) echo ' header-border' ?>">
+  <header class="header header-light<?php if(get_field('is_header_border') || is_single()) echo ' header-border' ?>">
     <div class="header-main">
       <div class="container-fluid">
         <div class="d-flex align-items-center">

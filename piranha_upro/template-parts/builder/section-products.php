@@ -4,7 +4,7 @@ if($args['row']):
 
   <?php if($products): ?>
 
-    <section class="products">
+    <section class="products" id="products">
       <div class="container-fluid">
 
         <?php if ($title): ?>

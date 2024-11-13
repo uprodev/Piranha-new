@@ -2,6 +2,12 @@
 Theme Name: Piranha-Tech
 */
 
+.default-form .input-wrap .wpcf7-not-valid-tip{
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
 .contacts .bottom .item h6 img{
 	height: auto;
 }
@@ -11,3 +17,43 @@ Theme Name: Piranha-Tech
 	position: relative;
 	bottom:0;
 }
+.default-form .input-wrap .wpcf7-not-valid-tip{
+	width: 100%;
+	font-size: 14px;
+	position: absolute;
+	bottom: -20px;
+}
+
+.wpcf7 form .wpcf7-response-output{
+	margin-left: 0!important;
+	margin-right: 0!important;
+}
+
+
+
+
+
+
+.contacts .bottom .item p a img{
+	height: auto;
+}
+footer .item {
+    margin-right: 10px;
+	width: 260px;
+}
+
+footer .item:last-child {
+    margin-right: 0;
+}
+
+@media(max-width: 1510px){
+	footer .item {
+	width: 210px;
+}
+}
+@media(max-width: 1280px){
+	 footer .logo-wrap {
+        margin-right: 40px;
+    }
+}
+   

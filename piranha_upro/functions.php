@@ -31,7 +31,7 @@ add_action('after_setup_theme', function(){
 		'header' => 'Header menu',
 		'footer-1' => 'Footer menu 1',
         'footer-2' => 'Footer menu 2',
-	) );
+    ) );
 });
 
 
@@ -161,5 +161,27 @@ function custom_language_switcher(){
         </div>
 
         <?php
+    }
+}
+
+
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+
+    if( function_exists('acf_register_block_type') ) {
+
+        $blocks = ['text', 'image', 'video'];
+
+        foreach ($blocks as $block) {
+            acf_register_block_type(array(
+                'name'              => 'my_' . $block,
+                'title'             => __(ucfirst($block) . ' (Piranha)'),
+                'description'       => __('Add ' . ucfirst($block)),
+                'render_template'   => 'parts/blocks/' . $block . '.php',
+                'category'          => 'common',
+                'post_types'        => array('post'),
+            ));
+        }
+
     }
 }
