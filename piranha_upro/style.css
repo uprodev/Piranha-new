@@ -1,6 +1,31 @@
 /*   
 Theme Name: Piranha-Tech
 */
+.header-navbar .header-navbar-bottom{
+	z-index: 999;
+}
+.accordion-button:not(.collapsed){
+	color: #000;
+}
+.header-navbar .navigation-main > ul > li ul a{
+	display: inline-block;
+	position: relative;
+}
+.header-navbar .navigation-main > ul > li ul a:after{
+	content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color:#A2A6AC;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+}
+.header-navbar .navigation-main > ul > li ul a:hover:after{
+	width: 100%;
+    left: 0;
+}
 
 .default-form .input-wrap .wpcf7-not-valid-tip{
 	position: relative;
@@ -30,7 +55,9 @@ Theme Name: Piranha-Tech
 }
 
 
-
+.bg-green.home footer .container-fluid .border {
+	border: 1px solid #22809B !important;
+}
 
 
 
@@ -46,6 +73,19 @@ footer .item:last-child {
     margin-right: 0;
 }
 
+footer .bottom p{
+	width: 100%;
+	text-align: center;
+}
+
+footer .bottom{
+	margin-top: 20px;
+}
+
+.products .item figure{
+	position: relative;
+}
+
 @media(max-width: 1510px){
 	footer .item {
 	width: 210px;
@@ -55,5 +95,29 @@ footer .item:last-child {
 	 footer .logo-wrap {
         margin-right: 40px;
     }
+		footer .item {
+	width: 27%;
+}
 }
    
+
+@media(max-width: 991px){
+	footer .item {
+	width: 25%;
+}
+}
+
+@media(max-width: 767px){
+	footer .item {
+	width: 34%;
+}
+	footer .item:last-child{
+		margin-left: 50px;
+	}
+}
+
+@media(max-width: 767px){
+	footer .item {
+	width: 100%;
+}
+}
