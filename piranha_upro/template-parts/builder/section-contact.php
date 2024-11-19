@@ -5,7 +5,7 @@ if($args['row']):
   <section class="contacts">
     <div class="container-fluid">
       <div class="content d-flex flex-wrap">
-        <div class="title">
+        <div class="title fade-in">
 
           <?php if ($title): ?>
             <h1><?= $title ?></h1>

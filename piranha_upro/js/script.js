@@ -154,7 +154,8 @@ document.querySelectorAll(".fade-in, .fade-in-wrapper > *").forEach((el) => {
 
 jQuery(document).ready(function ($) {
   //mask tel
-  $('.tel').mask('+380 999-99-99', {placeholder: "+380 000-00-00"});
+  $('.tel').mask('+380 999-99-99');
+  $('.tel.en').mask('+999 999-99-99');
 
   //add class header
   $(window).scroll(function () {

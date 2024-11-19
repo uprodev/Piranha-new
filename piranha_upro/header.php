@@ -7,7 +7,7 @@
   <?php wp_head(); ?>
 </head>
 
-<?php $body_class = is_front_page() ? 'home' : is_page(119) ? 'bg-green' : '' ?>
+<?php $body_class = is_front_page() ? 'home' : is_page(apply_filters('wpml_object_id', 119, 'page')) ? 'bg-green' : '' ?>
 <body <?php body_class($body_class); ?>>
   <?php wp_body_open(); ?>
   <header class="header header-light<?php if(get_field('is_header_border') || is_single()) echo ' header-border' ?>">

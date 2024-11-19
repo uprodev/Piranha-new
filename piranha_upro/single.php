@@ -2,7 +2,7 @@
 
 <section class="text-default">
 	<div class="container-fluid">
-		<div class="content">
+		<div class="content fade-in-wrapper">
 			<h1><?php the_title() ?></h1>
 			<figure>
 				<?php the_post_thumbnail() ?>

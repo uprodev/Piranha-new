@@ -968,7 +968,7 @@ footer {
     z-index: 3;
     padding: 68px 0 35px; }
   footer .left {
-    width: 50%;
+    width: 70%;
     grid-gap: 20px; }
   footer .logo-wrap {
     width: 50px;
@@ -1041,7 +1041,7 @@ footer {
       right: 20px;
       height: 100%; }
   footer .right {
-    width: 50%;
+    width: 30%;
     grid-gap: 40px 49px; }
   footer .btn-wrap {
     padding-top: 3px; }
@@ -1241,7 +1241,7 @@ footer {
     font-family: "Inter", serif; }
   .contacts .bottom {
     width: calc(100% - 750px);
-    margin-top: -228px;
+    margin-top: -261px;
     grid-gap: 49px 20px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
@@ -1275,6 +1275,7 @@ footer {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+		  font-family: "Inter", serif;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
@@ -1522,10 +1523,10 @@ footer {
 /*-----------------------------END-NEWS-INNER-PAGE----------------------------------*/
 /*-----------------------------PRODUCT-PAGE----------------------------------*/
 .product-header {
-  padding: 200px 0 0;
-  margin: 0 0 205px; }
+  padding: 140px 0 0;
+  margin: 0 0 70px; }
   .product-header .link-back-wrapper {
-    margin: 0 0 153px; }
+    margin: 0 0 60px; }
   .product-header .text {
     border-bottom: 1px solid #171818;
     padding: 0 0 17px; }
@@ -1709,8 +1710,8 @@ footer .btn-wrap .btn {
   font-size: 15px;
   text-transform: uppercase; }
 
-footer .item-menu li a, footer .item p, footer .item p a {
-  font-weight: 500; }
+/*footer .item-menu li a, footer .item p, footer .item p a {
+  font-weight: 500; }*/
 
 .home-banner .text p {
   font-family: "Inter", serif; }
@@ -1854,6 +1855,48 @@ footer .item-menu li a, footer .item p, footer .item p a {
   position: absolute;
   top: 0;
   left: 10px; }
+.contacts .bottom .item h6 img, footer .item h6 img{
+	border: 1px solid rgba(0,0,0,0.5);
+}
 
+.products .item p{
+	 word-break: break-word;
+  hyphens: manual;
+}
+
+.home footer{
+	background: #fff;
+}
+.text-default figure img{
+	max-height: 600px;
+	object-fit: cover;
+}
+
+.block-404 {
+    height: calc(100vh - 338px);
+    min-height: 410px;
+    padding: 113px 0 0;
+}
+.block-404 .container-fluid{
+	    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.block-404 .h1, .block-404 h1 {
+    font-size: clamp(7rem, 10.42vw, 12.5rem);
+    color: #3b94c8;
+    margin: 0 0 13px;
+	font-family: 'IBM Plex Sans';
+}
+
+.block-404 .btn {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.accordion .accordion-item .accordion-body p, .accordion .accordion-item .accordion-body ol, .accordion .accordion-item .accordion-body a{
+	color: #858688;
+}
 /*----------------------------END-PRODUCT-PAGE----------------------------------*/
 /*# sourceMappingURL=styles.css.map */

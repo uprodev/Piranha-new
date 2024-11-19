@@ -2,7 +2,7 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
-  <section class="careers">
+  <section class="careers fade-in">
     <div class="container-fluid">
       <div class="content">
         <div class="title text-center">
@@ -17,7 +17,7 @@ if($args['row']):
         <div class="form-wrap d-flex flex-wrap">
 
           <?php if ($image): ?>
-            <figure class="fade-in">
+            <figure class="">
               <?= wp_get_attachment_image($image['ID'], 'full') ?>
             </figure>
           <?php endif ?>
