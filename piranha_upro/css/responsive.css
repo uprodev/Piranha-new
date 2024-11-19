@@ -107,6 +107,16 @@
 @media (max-width: 1410px) {
   .header-navbar .navigation-main > ul > li {
     min-width: 19%; }
+	
+	footer .logo-wrap{
+		margin-right: 50px;
+	}
+		footer .left {
+			width: 68%;}
+	footer .right {
+  	width: 32%;
+    grid-gap: 40px 25px;
+}
 
   .header-navbar .navigation-main > ul {
     -ms-flex-wrap: wrap;
