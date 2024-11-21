@@ -2,7 +2,7 @@
 if($args['row']):
 	foreach($args['row'] as $key=>$arg) $$key = $arg; ?>
 
-  <section class="home-section-1">
+  <section class="home-section-1" id="about">
     <div class="container-fluid">
       <div class="content">
         <div class="title-wrap ">

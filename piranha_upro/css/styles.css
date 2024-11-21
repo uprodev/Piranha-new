@@ -1899,4 +1899,33 @@ footer .btn-wrap .btn {
 	color: #858688;
 }
 /*----------------------------END-PRODUCT-PAGE----------------------------------*/
+.contacts .bottom .item:nth-child(4){
+	position:absolute;
+	right:0;
+	bottom: 205px;
+}
+
+.home-banner{
+	overflow: hidden;
+}
+
+.home-banner .text>*{
+	position: relative;
+	z-index: 2
+}
+
+.home-banner .text .link-block{
+	z-index: 1;
+
+}
+
+.home-banner .text .link-block a{
+	position: absolute;
+	top: 50%;
+	height: 200vh;
+	left: 50%;
+	width: calc(100vw + 100px);
+	transform: translate(-50%,-50%);
+	display: block;
+}
 /*# sourceMappingURL=styles.css.map */

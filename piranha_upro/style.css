@@ -1,6 +1,15 @@
 /*   
 Theme Name: Piranha-Tech
 */
+.contacts .bottom{
+	position: relative;
+	
+}
+
+
+.tel.en{
+	padding-left: 0!important;
+}
 .header-navbar .header-navbar-bottom{
 	z-index: 999;
 }

@@ -186,4 +186,13 @@ jQuery(document).ready(function ($) {
       $('.top-btn').removeClass('home-border')
     }
   });
+	
+	//scroll to block
+
+  $(document).on('click', '.scroll a', function (e) {
+    e.preventDefault();
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 2000);
+  });
 });

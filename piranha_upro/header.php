@@ -83,6 +83,9 @@
         <?php endif ?>
 
         <div class="text">
+			<div class="link-block scroll">
+				<a href="#about"></a>
+			</div>
 
           <?php if ($field = get_field('subtitle_1')): ?>
             <p><?= $field ?></p>
